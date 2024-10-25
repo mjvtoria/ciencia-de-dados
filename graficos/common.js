@@ -5,6 +5,9 @@ const getCSS = (variavel) => {
   const layout = {
     plot_bgcolor: getCSS("--bg-color"),
     paper_bgcolor: getCSS("--bg-color")
+    title: {
+        text: "Redes sociais com mais usuários no mundo"
+      }
 
 
 }
