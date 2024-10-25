@@ -1,3 +1,4 @@
+import { getCSS, tickConfig } from "./common.js"
 async function quantidadeUsuarios() {
     const url = "https://raw.githubusercontent.com/guilhermeomrails/api/main/numero-usuarios.json"
     const res = await fetch(url)
@@ -20,6 +21,37 @@ async function quantidadeUsuarios() {
   document.getElementById("graficos-container").appendChild(grafico)
   Plotly.newPlot(grafico, data,layout)
   
+  }
+
+  const layout = {
+    plot_bgcolor: getCSS("--bg-color"),
+    paper_bgcolor: getCSS("--bg-color"),
+    title: {
+      text: "Redes sociais com mais usuários no mundo",
+       x: 0,
+       font: {
+           color: getCSS("--primary-color"),
+           family: getCSS("--font"),
+           size: 30
+       }
+    },
+      
+    xaxis: {
+        title: {
+            text: "nome das redes sociais",
+            font: {
+                color: getCSS("--secondary-color")
+            }
+        }
+    },
+    yaxis: {
+        title: {
+            text: "bilhões de usuários ativos",
+            font: {
+                color: getCSS("--secondary-color")
+            }
+        }
+    }
   }
 
   import { getCSS } from "./common.js";
