@@ -54,7 +54,7 @@ async function quantidadeUsuarios() {
     }
   }
 
-  import { getCSS } from "./common.js";
+  import {getCSS} from "./common.js";
 
   
   quantidadeUsuarios()
